@@ -73,8 +73,6 @@ if st.button("Predict"):
                     st.write(f"Model 1 Logits (sigmoid activated): {round(prediction)}")
                     st.write(f"Model 1 is trained to output a sequence of 0,1 for each two consecutive characters. len(logits) == len(input_seq) - 1")
                 else:
-                    import random
-                    print("".join([random.choice("NACGT") for _ in range(128)]))
                     st.warning("Model 1 requires sequences of atleast length 2.")
             else:
                 st.warning("Model 1 is not loaded.")
